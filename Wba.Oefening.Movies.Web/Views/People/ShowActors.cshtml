@@ -1,0 +1,24 @@
+﻿@model PeopleShowPersonsViewModel
+
+<h2>@ViewBag.PageTitle</h2>
+<div class="row">
+    <div class="col-4 mx-auto">
+        <table class="table table-responsive table-hover">
+            <tr>
+                <th>Director</th>
+                <th>Action</th>
+            </tr>
+            @foreach (var actor in Model.Persons)
+            {
+                <tr>
+                    <td>@actor.Name</td>
+                    <td>
+                        <a asp-controller="People"
+                           asp-action="ShowActorMovies"
+                           asp-route-id="@actor.Id" class="btn btn-outline-info">Movies</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
