@@ -1,0 +1,13 @@
+﻿@model MenuComponentViewModel
+
+@foreach (var link in Model.Links)
+{
+    <li class="nav-item @link.Selected">
+        <a class="nav-link text-dark" asp-area="" 
+           asp-controller="@link.Controller"
+           asp-action="@link.Action">@link.Text</a>
+    </li>
+}
+
+
+
