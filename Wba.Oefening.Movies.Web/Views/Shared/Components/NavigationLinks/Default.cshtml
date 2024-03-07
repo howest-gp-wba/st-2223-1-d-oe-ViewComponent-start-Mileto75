@@ -1,0 +1,9 @@
+﻿@model NavigationLinksComponentViewModel
+
+@foreach(var actionLink in Model.ActionLinks)
+{ 
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="@actionLink.Controller" 
+           asp-action="@actionLink.Action">@actionLink.Name</a>
+    </li>
+}
